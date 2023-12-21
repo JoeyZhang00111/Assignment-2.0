@@ -75,13 +75,14 @@ public class Employee {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true; // Same object reference
+        if (obj == this) {
+            return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false; // Not the same class or null
+        if (!(obj instanceof Employee)) {
+            return false;
         }
-		return false;
+        Employee employee = (Employee) obj;
+        return Double.compare(employee.calculateGrossPay(), this.calculateGrossPay()) == 0;
     }
    
     
@@ -96,9 +97,4 @@ public class Employee {
     }
 
   
-}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 }
