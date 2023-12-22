@@ -2,30 +2,29 @@ import java.text.NumberFormat;
 
 public class Employee {
     private int employeeNumber;
-   
+
     private double hourlyWage;
     private int hoursWorked;
-    
+
     public Employee(double hourlyWage, int hoursWorked, int employeeNumber) {
         this.employeeNumber = employeeNumber;
         this.hourlyWage = hourlyWage;
         this.hoursWorked = hoursWorked;
     }
 
-    //Employee Number
-    
+    // Employee Number
+
     public int getEmployeeNumber() {
         return employeeNumber;
     }
-    
-    
+
     public int getNextEmployeeNumber() {
-        return this.employeeNumber+1;
+        return this.employeeNumber + 1;
     }
-	
-    //Hourly wage
-    
-	public double getHourlyWage() {
+
+    // Hourly wage
+
+    public double getHourlyWage() {
         return hourlyWage;
     }
 
@@ -33,35 +32,33 @@ public class Employee {
         this.hourlyWage = hourlyWage;
     }
 
-    //Hours worked
+    // Hours worked
 
-	public double getHoursWorked() {
+    public double getHoursWorked() {
         return hoursWorked;
     }
-    
+
     public void setHoursWorked(int hoursWorked) {
         this.hoursWorked = hoursWorked;
     }
-    //Regular wage
+    // Regular wage
 
     public double calculateRegularPay() {
-    	return Math.min(this.hoursWorked, 8)* this.hourlyWage;
+        return Math.min(this.hoursWorked, 8) * this.hourlyWage;
     }
-    
-    //Overtime Pay
+
+    // Overtime Pay
 
     public double calculateOvertimePay() {
-    	return Math.max(this.hoursWorked-8, 0) * (this.hourlyWage*1.5);
+        return Math.max(this.hoursWorked - 8, 0) * (this.hourlyWage * 1.5);
     }
 
     public double calculateGrossPay() {
         return calculateRegularPay() + calculateOvertimePay();
     }
 
-
     // Constructors
-   
-    
+
     public String toString() {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
         return "Employee ID: " + this.employeeNumber + "\n" +
@@ -72,5 +69,4 @@ public class Employee {
                 "Gross Pay: " + currencyFormat.format(calculateGrossPay());
     }
 
-  
 }
