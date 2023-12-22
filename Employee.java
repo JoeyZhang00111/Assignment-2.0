@@ -10,7 +10,7 @@ public class Employee {
         this.employeeNumber = employeeNumber;
         this.hourlyWage = hourlyWage;
         this.hoursWorked = hoursWorked;
-        }
+    }
 
     //Employee Number
     
@@ -35,7 +35,7 @@ public class Employee {
 
     //Hours worked
 
-    public double getHoursWorked() {
+	public double getHoursWorked() {
         return hoursWorked;
     }
     
@@ -46,44 +46,20 @@ public class Employee {
 
     public double calculateRegularPay() {
     	return Math.min(this.hoursWorked, 8)* this.hourlyWage;
-//        if (getHoursWorked() <= 40) {
-//            return getHoursWorked() * hourlyWage;
-//        } else {
-//            return 40 * hourlyWage;
-//        }
     }
     
     //Overtime Pay
 
     public double calculateOvertimePay() {
     	return Math.max(this.hoursWorked-8, 0) * (this.hourlyWage*1.5);
-//        if (getHoursWorked() > 40) {
-//            return (getHoursWorked() - 40) * (hourlyWage * 1.5);
-//        } else {
-//            return 0;
-//        }
     }
 
     public double calculateGrossPay() {
         return calculateRegularPay() + calculateOvertimePay();
     }
-    
-    private int number;
-    private String text;
 
-    // Constructor and other methods...
 
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == this) {
-            return true;
-        }
-        if (!(obj instanceof Employee)) {
-            return false;
-        }
-        Employee employee = (Employee) obj;
-        return Double.compare(employee.calculateGrossPay(), this.calculateGrossPay()) == 0;
-    }
+    // Constructors
    
     
     public String toString() {
