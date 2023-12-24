@@ -4,6 +4,7 @@ public class main {
     static final int START_EMPLOYEE_NUMBER = 1000;
 
     public static void main(String[] args) {
+        System.out.println("hello world");
         Employee emp1 = new Employee(0, 0, START_EMPLOYEE_NUMBER);
         Employee emp2 = new Employee(0, 0, emp1.getNextEmployeeNumber());
         Employee emp3 = new Employee(0, 0, emp1.getNextEmployeeNumber());
