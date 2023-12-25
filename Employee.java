@@ -71,14 +71,15 @@ public class Employee {
 
     }
 
-    public String toString() {
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
-        return "Employee ID: " + this.employeeNumber + "\n" +
-                "Hours Worked: " + this.getHoursWorked() + "\n" +
-                "Hourly Wage: " + currencyFormat.format(this.hourlyWage) + "\n" +
-                "Regular Pay: " + currencyFormat.format(calculateRegularPay()) + "\n" +
-                "Overtime Pay: " + currencyFormat.format(calculateOvertimePay()) + "\n" +
-                "Gross Pay: " + currencyFormat.format(calculateGrossPay());
+    public String toString(){
+        NumberFormat newFormat = NumberFormat.getCurrencyInstance();
+        return "Employee ID" + this.employeeNumber + "\n" +
+               "Hours Worked" + this.getHoursWorked() + "\n" +
+               "Hourly Wage" + newFormat.format(this.hourlyWage) + "\n" +
+               "Regular Pay" + newFormat.format(calculateRegularPay())+ "\n" +
+               "Overtime Pay" + newFormat.format(calculateOvertimePay()) + "\n" +
+               "Gross Pay" +newFormat.format(calculateGrossPay());   
     }
+ 
 
 }
