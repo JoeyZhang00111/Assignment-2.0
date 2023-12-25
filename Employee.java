@@ -61,20 +61,19 @@ public class Employee {
 
     public boolean equals(int employeeNumber, double hourlyWage, int hoursWorked) {
         boolean results = false;
-            if(employeeNumber == this.employeeNumber || hourlyWage == this.hourlyWage || hoursWorked == this.hoursWorked){
-                results = true;
+        if (employeeNumber == this.employeeNumber || hourlyWage == this.hourlyWage || hoursWorked == this.hoursWorked) {
+            results = true;
 
-            }
-            else{
-                results = false;
-            }
+        } else {
+            results = false;
+        }
         return results;
-        
+
     }
 
     public String toString() {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
-        return  "Employee ID: " + this.employeeNumber + "\n" +
+        return "Employee ID: " + this.employeeNumber + "\n" +
                 "Hours Worked: " + this.getHoursWorked() + "\n" +
                 "Hourly Wage: " + currencyFormat.format(this.hourlyWage) + "\n" +
                 "Regular Pay: " + currencyFormat.format(calculateRegularPay()) + "\n" +
