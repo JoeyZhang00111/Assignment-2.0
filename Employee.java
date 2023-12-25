@@ -59,14 +59,27 @@ public class Employee {
 
     // Constructors
 
-    public String toString() {
-        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
-        return "Employee ID: " + this.employeeNumber + "\n" +
-                "Hours Worked: " + this.getHoursWorked() + "\n" +
-                "Hourly Wage: " + currencyFormat.format(this.hourlyWage) + "\n" +
-                "Regular Pay: " + currencyFormat.format(calculateRegularPay()) + "\n" +
-                "Overtime Pay: " + currencyFormat.format(calculateOvertimePay()) + "\n" +
-                "Gross Pay: " + currencyFormat.format(calculateGrossPay());
+    public boolean equals(int employeeNumber, double hourlyWage, int hoursWorked) {
+        boolean results = false;
+        if (employeeNumber == this.employeeNumber || hourlyWage == this.hourlyWage || hoursWorked == this.hoursWorked) {
+            results = true;
+
+        } else {
+            results = false;
+        }
+        return results;
+
     }
+
+    public String toString(){
+        NumberFormat newFormat = NumberFormat.getCurrencyInstance();
+        return "Employee ID" + this.employeeNumber + "\n" +
+               "Hours Worked" + this.getHoursWorked() + "\n" +
+               "Hourly Wage" + newFormat.format(this.hourlyWage) + "\n" +
+               "Regular Pay" + newFormat.format(calculateRegularPay())+ "\n" +
+               "Overtime Pay" + newFormat.format(calculateOvertimePay()) + "\n" +
+               "Gross Pay" +newFormat.format(calculateGrossPay());   
+    }
+ 
 
 }

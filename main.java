@@ -15,8 +15,8 @@ public class main {
         emp2.setHoursWorked(8);
         emp2.setHourlyWage(15);
 
-        emp3.setHoursWorked(9);
-        emp3.setHourlyWage(18);
+        emp3.setHoursWorked(8);
+        emp3.setHourlyWage(15);
 
         System.out.println("Employee 1 Record:");
         System.out.println(emp1);
@@ -28,8 +28,10 @@ public class main {
         System.out.println(emp3);
 
         System.out.println("\nDemonstrating equals method:");
-        System.out.println("Employee 1 equals Employee 2: " + emp1.equals(emp2));
-        System.out.println("Employee 2 equals Employee 3: " + emp2.equals(emp3));
+        System.out.println("Employee 1 equals Employee 2: "
+                + emp1.equals(emp2.getEmployeeNumber(), emp2.getHourlyWage(), (int) emp2.getHoursWorked()));
+        System.out.println("Employee 2 equals Employee 3: "
+                + emp2.equals(emp3.getEmployeeNumber(), emp3.getHourlyWage(), (int) emp3.getHoursWorked()));
 
         System.out.println("\nGetters and setters demonstration :");
         System.out.println("Previous hourly wage of Employee 1: " + emp1.getHourlyWage());
