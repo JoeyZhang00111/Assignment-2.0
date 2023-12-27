@@ -70,7 +70,6 @@ public class Employee {
 
     }
 
-
     public String toString() {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
         return "Employee ID: " + this.employeeNumber + "\n" +
