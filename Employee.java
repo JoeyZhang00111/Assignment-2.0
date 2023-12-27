@@ -19,7 +19,7 @@ public class Employee {
     }
 
     public int getNextEmployeeNumber() {
-        return this.employeeNumber +1;
+        return this.employeeNumber + 1;
     }
 
     // Hourly wage

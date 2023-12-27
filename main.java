@@ -7,7 +7,7 @@ public class main {
         System.out.println("hello world");
         Employee emp1 = new Employee(0, 0, START_EMPLOYEE_NUMBER);
         Employee emp2 = new Employee(0, 0, emp1.getNextEmployeeNumber());
-        Employee emp3 = new Employee(0, 0, emp2.getNextEmployeeNumber());
+        Employee emp3 = new Employee(0, 0, emp1.getNextEmployeeNumber());
 
         emp1.setHoursWorked(10);
         emp1.setHourlyWage(20);
