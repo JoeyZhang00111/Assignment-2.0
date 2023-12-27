@@ -19,7 +19,7 @@ public class Employee {
     }
 
     public int getNextEmployeeNumber() {
-        return this.employeeNumber + 1;
+        return this.employeeNumber +1;
     }
 
     // Hourly wage
@@ -58,6 +58,18 @@ public class Employee {
     }
 
     // Constructors
+    public boolean equals(int employeeNumber, double hourlyWage, int hoursWorked) {
+        boolean results;
+        if (employeeNumber == this.employeeNumber && hourlyWage == this.hourlyWage && hoursWorked == this.hoursWorked) {
+            results = true;
+
+        } else {
+            results = false;
+        }
+        return results;
+
+    }
+
 
     public String toString() {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
