@@ -58,6 +58,17 @@ public class Employee {
     }
 
     // Constructors
+    public boolean equals(Employee employee) {
+        
+        if (employee.employeeNumber == this.employeeNumber && employee.hourlyWage == this.hourlyWage
+                && employee.hoursWorked == this.hoursWorked) {
+            return true;
+
+        } else {
+            return false;
+        }
+
+    }
 
     public String toString() {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
