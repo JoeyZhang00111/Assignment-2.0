@@ -59,15 +59,14 @@ public class Employee {
 
     // Constructors
     public boolean equals(Employee employee) {
-        boolean results;
+        
         if (employee.employeeNumber == this.employeeNumber && employee.hourlyWage == this.hourlyWage
                 && employee.hoursWorked == this.hoursWorked) {
-            results = true;
+            return true;
 
         } else {
-            results = false;
+            return false;
         }
-        return results;
 
     }
 

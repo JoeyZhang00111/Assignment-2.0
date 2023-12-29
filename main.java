@@ -12,10 +12,10 @@ public class main {
         emp1.setHoursWorked(10);
         emp1.setHourlyWage(20);
 
-        emp2.setHoursWorked(9);
+        emp2.setHoursWorked(8);
         emp2.setHourlyWage(15);
 
-        emp3.setHoursWorked(9);
+        emp3.setHoursWorked(8);
         emp3.setHourlyWage(15);
 
         System.out.println("Employee 1 Record:");
